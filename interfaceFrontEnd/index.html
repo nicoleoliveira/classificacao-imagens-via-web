@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="classificacaoApp">
+<head>
+  <meta charset="utf-8"/>
+  <!-- <meta content="123ReallyLongThingHere=" name="csrf-token" /> -->
+  <title>Classificação Web</title>
+  <link rel="stylesheet" href="libs/node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="static/css/style.css">
+
+  <script src="libs/jquery-2.2.4.min.js"></script>
+  <script src="libs/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="libs/node_modules/angular/angular.js"></script>
+  <script src="libs/node_modules/angular-resource/angular-resource.js"></script>
+  <script src="libs/node_modules/angular-route/angular-route.js"></script>
+  <script src="libs/node_modules/angular-file-upload/dist/angular-file-upload.js"></script>
+  <script src="libs/node_modules/angular-cookies/angular-cookies.js"></script>
+  <script src="libs/angular-canvas-area-draw.js"></script>
+  <script src="libs/node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+  <script src="app.module.js"></script>
+  <script src="app.routes.js"></script>
+  <script src="app.config.js"></script>
+  <script src="app.service.js"></script>  
+
+  <!-- Upload -->
+  <script src="upload/upload.controller.js"></script>
+
+  <!-- Amostras -->
+  <script src="amostras/amostras.controller.js"></script>
+  <script src="amostras/amostras.service.js"></script>
+
+  <!-- Classificacao -->
+  <script src="classificacao/classificacao.controller.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Classificação Web</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="#!upload">Upload Imagem</a></li>
+          <li><a href="#!amostras">Amostras</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section style="margin-left: 5px;" ng-view class="row"></section>
+
+</body>
+
+</html>

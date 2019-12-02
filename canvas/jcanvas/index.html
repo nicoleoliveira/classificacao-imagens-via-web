@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script src="jcanvas.min.js"></script>
+		<script src="jquery-2.2.4.min.js"></script>
+		<canvas width="300" height="150"></canvas>
+		<script>
+			// Hover over the triangle to rotate it
+			$('canvas').drawPolygon({
+			  layer: true,
+			  fillStyle: '#fff',
+			  strokeStyle: '#333',
+			  strokeWidth: 2,
+			  x: 160, y: 150,
+			  radius: 100,
+			  sides: 3,
+			  mouseover: function(layer) {
+			    $(this).animateLayer(layer, {
+			      fillStyle: '#c33'
+			    }, 500);
+			  },
+			  mouseout: function(layer) {
+			    $(this).animateLayer(layer, {
+			      fillStyle: '#fff'
+			    }, 500);
+			  },
+			});
+		</script>
+
+
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<div ng-controller="amostrasController">
+    <div class="samples">
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="nomeClasse">Nome da classe</label>
+                <input type="text" class="form-control" ng-model="label">
+            </div>
+            <input type="color" ng-model="colorPolygonActive">
+            <button class="btn btn-primary" ng-click="add()" ng-disabled="!label || points[0].length === 0">Nova amostra</button>
+            <button class="btn btn-default" ng-click="undo()">Desfazer</button>
+            <button class="btn btn-default" ng-click="clearAll()">Limpar</button>
+            <button class="btn btn-default" ng-click="removePolygon(activePolygon)">Remover</button>
+            <button class="btn btn-success" ng-click="classificar(samples)">Classificar</button>
+        </form>
+        <br>
+        <div class="legend" ng-repeat="sample in samples">
+            <p>
+                <div ng-style="{'background-color':sample.color}" class="colorSample"></div>
+                <span class="legend-label">{{ sample.label }}</span>
+            </p>
+        </div>
+    </div>
+    <div class="imagem" canvas-area-draw points="points" active="activePolygon" image-url="imageSrc" enabled="enabled" palette="colorArray"></div>
+    </div>

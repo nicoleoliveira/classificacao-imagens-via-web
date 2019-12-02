@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="1000" height="1000"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var imageObj = new Image();
+
+      imageObj.onload = function() {
+        context.drawImage(imageObj, 0, 0);
+      };
+      imageObj.src = 'leao-observador-wallpaper.jpg';
+    </script>
+  </body>
+</html>

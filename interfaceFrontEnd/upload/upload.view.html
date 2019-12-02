@@ -1,0 +1,37 @@
+<div ng-controller="uploadController">
+  <div class="col-md-2"></div>
+  <div class="col-md-8 conteudo">
+    <div class="steps">
+      <div class="step active">
+        <span class="step-number">1</span> <span>Upload imagem</span>
+      </div>
+      <span class="step-line"></span>
+
+      <div class="step">
+        <span class="step-number">2</span> <span>Amostras</span>
+      </div>
+      <span class="step-line"></span>
+
+      <div class="step">
+        <span class="step-number">3</span> <span>Classificação</span>
+      </div>
+
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2>Fazer upload da imagem</h2>
+      </div>
+
+         <input type="file" nv-file-select uploader="uploader"/><br/>
+         <ul>
+             <li ng-repeat="item in uploader.queue">
+                 Name: <span ng-bind="item.file.name"></span><br/>
+                 <button class="btn btn-primary" ng-click="item.upload()">upload</button>
+             </li>
+         </ul>
+    </div>
+
+
+  </div>
+  <div class="col-md-2"></div>
+</div>
